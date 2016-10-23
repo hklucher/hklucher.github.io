@@ -1,16 +1,24 @@
 ---
 layout: page
-title: About
+title: About Harrison
 permalink: /about/
 ---
 
-I started my professional journey in the field of Psychology before saying
-"screw this, let's do something **fun**!". Shortly after I began teaching myself
-to code - starting out with HTML/CSS JavaScript, Python, and Ruby. A little later
-I enrolled at [Dev Bootcamp](https://devbootcamp.com/).
+<!--- TODO: Add a photo of my beautiful, shining face. --->
 
-Since then I've been working professionally as a software developer and loving
-every second of it.
+I'm a software developer by day, and whatever a software developer
+at night is by night. While working a research job, I found an interest in
+coding, and began teaching myself HTML/CSS, JavaScript, Python, and Ruby. I soon realized
+that learning to code was a heavy task, and one that I would prefer to do in the company of
+others, which prompted me to enroll in [Dev Bootcamp's](https://devbootcamp.com/) Chicago
+campus. I've been working professionally as software developer ever since, and I've been loving it.
 
-If you'd like to reach out to me, the internet has been kind enough to provide
-me with several means of contact. Check them out [here!](/contact/)
+Outside of coding, I'm two-bit musician who can usually be found with headphones on.
+I like weird music, sci-fi, bad horror movies, and psychology. If you'd like to reach out,
+you can catch me at one of these guys:
+
+* [Email](mailto:{{site.author.email}})
+* [LinkedIn]({{site.author.linkedin}})
+* [Twitter]({{site.author.twitter}})
+
+Checkout my [resume](*) if you'd like!

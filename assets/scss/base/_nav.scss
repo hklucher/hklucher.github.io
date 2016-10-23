@@ -1,3 +1,6 @@
-.navbar a {
-  color: $ember !important;
+.icon-link {
+  color: $ember;
+  &:hover {
+    color: black;
+  }
 }
