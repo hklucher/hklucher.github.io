@@ -1,0 +1,58 @@
+
+# SEO settings
+# title: "Think"
+# title2: "space" # default: ""
+# description: "Just another minimalist Jekyll theme that focuses on technical writing."
+# keywords: "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
+# url: http://heiswayi.github.io/thinkspace # site url
+# baseurl: "/thinkspace" # apply repo name if use it under gh-pages branch
+# baseurl: null # apply null if repo name is something like username.github.io
+
+# google_analytics: UA-XXXXX-XX
+# repo: http://github.com/heiswayi/thinkspace
+# disqus_shortname: "heiswayi"
+# twitter_username: "HeiswayiNrird"
+# comments: true
+
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source: ./
+destination: ./_site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : "Harrison Klucher"
+  job      : "Software Developer"
+  bio      : "I write code and play music (sometimes at the same time!). I'm always learning new stuff, and sometimes I need an outlet to express this stuff in writing for my own benefit."
+  thumb    : /images/author.jpg
+  email    : hklucher@gmail.com
+  url      : http://hklucher.github.io
+  github   : https://www.github.com/hklucher
+  twitter  : https://twitter.com/hklucher
+  linkedin : https://www.linkedin.com/in/harrisonklucher
+
+# social settings
+og_locale: "en_US"
+twitter_card: "summary_large_image"
+twitter_site: "@HeiswayiNrird"
+
+gems:
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
