@@ -4,8 +4,6 @@ title: About Harrison
 permalink: /about/
 ---
 
-<!--- TODO: Add a photo of my beautiful, shining face. --->
-
 I'm a software developer by day, and whatever a software developer
 at night is by night. While working a research job, I found an interest in
 coding, and began teaching myself HTML/CSS, JavaScript, Python, and Ruby. I soon realized
