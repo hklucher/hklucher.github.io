@@ -19,4 +19,4 @@ you can catch me at one of these guys:
 * [LinkedIn]({{site.author.linkedin}})
 * [Twitter]({{site.author.twitter}})
 
-Checkout my [resume](*) if you'd like!
+Checkout my [resume]({{ site.url }}/assets/docs/Harrison_Klucher_Resume.pdf) if you'd like!
