@@ -54,8 +54,8 @@ hr {
   float: right;
 }
 
-.link {
-  color: $blue-color;
+.link:not(.icon-link) {
+  color: $ember;
   padding-bottom: .05em;
   border-bottom: 2px solid transparent;
 
@@ -64,7 +64,7 @@ hr {
   &:hover,
   &:focus,
   &:active {
-    border-bottom: 2px solid $blue-color;
+    border-bottom: 2px solid $ember;
   }
 }
 
