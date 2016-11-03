@@ -7,14 +7,14 @@ keywords: "ruby rails delegate"
 ---
 
 Sometimes you have a class that needs to know some information about one
-of it's relationships. In order to acheive something like this, it may be
+of its relationships. In order to achieve something like this, it may be
 wise to consider using a [delegation design pattern](https://en.wikipedia.org/wiki/Delegation_pattern).
 
 In a basic sense, a delegation pattern is a way to achieve reusable code.
-Delegation sounds a lot like inheritance, right? In a sense, delegation
+Sounds a lot like inheritance, right? In a sense, delegation
 kind of *is* inheritance, just done a little differently. Perhaps you
 have a subclass inheriting from a superclass where the subclass really
-only *needs* one or two of the superclass' public methods. Then instead
+only *needs* one or two of the superclass' public methods. Instead
 of inheriting for the sake of using one inherited method, we can
 delegate that method out to the appropriate class.
 
@@ -74,11 +74,11 @@ class OperationRequest < ActiveRecord::Base
 end
 {% endhighlight %}
 
-Now we can interact with out `OperationRequest` class like so:
+Now we can interact with our `OperationRequest` class with:
 `@operation_request.approved?` or `@operation_request.denied?`.
 
 Okay, this is a little bit better. We don't have to chain methods explicitly when
-checking the for an operation request's status. However, we more or less wrote the
+checking the for an operation requests status. However, we more or less wrote the
 same two methods in two different classes, which isn't super DRY.
 
 Let's have one more crack at it:
@@ -90,9 +90,11 @@ class OperationRequest < ActiveRecord::Base
 end
 {% endhighlight %}
 
-Nice. This let's us still interact with our class like before, with `@operation_request.approved?`,
-but with significantly less code. Additionally, we're making it explicit to
-other developers who come across our code that a requests approval status is
+Nice. This lets us still interact with our class like before, with `@operation_request.approved?`,
+but with significantly less code. By doing this, we're basically telling our
+OperationRequest class to create two instance methods of `approved?` and `denied?`
+and *delegate* them out to whatever the `Status` class has defined as those methods.
+Additionally, we're making it explicit to other developers who come across our code that a requests approval status is
 explicitly dependent on it's relationship to status.
 
 Delegation is a handy tool, albeit one that is handy in a select few niche
