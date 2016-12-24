@@ -23,7 +23,7 @@ So what's the difference between `Enum` and `Stream`? Enums are *eager* loaded, 
 a bunch of Enum functions together, all of those functions will be performed
 right away, and return the final value. A Stream can perform the same functions, but the functions will not be performed until necessary.
 
-Because Streams use are lazy, it's often a good idea to use them for big sets of data. Let's check out some examples.
+Because Streams are lazy, it's often a good idea to use them for big sets of data. Let's check out some examples.
 
 ## Using Streams
 
@@ -53,4 +53,18 @@ This is the beginning of something that I like to use to read text files.
 
 Here I create a stream from a file using Elixir's `File` module, use the Enumerable's map function to parse any new line characters from each line, then transform the resulting struct to a list. From here I can use any typical Enumerable function on the data that I need, as I recurse through the list and perform more complicated functions on each piece of data.
 
-All in all, Streams are going to be a good way of handling text files. Text files can get pretty long, and so a streams lazy way of performing functions can help with performance. 
+# Composable
+
+Streams are composable, in the sense that we can *compose* several functions to them. We can do this with the `Enum` module, but Streams can be more performant when working with huge data sets. Let's say that I have a big list, and from that list I only want to take the last 5 items. One way to
+do this is use `Enum.take/2` coupled with `Enum.reverse/1` like so:
+
+{% highlight ruby %}
+  list = [] # pretend there's a lot of data in here
+  Enum.reverse(list) |> Enum.take(5)
+{% endhighlight %}
+
+If we have to reverse this entire list just to get those last 5 elements, we might have some performance issues. A stream could be beneficial here because it will only reverse those 5 elements. Once it's completed all functions passed to it, the job is done.
+
+# Conclusion
+
+All in all, streams are a great option to have in Elixir. I initially used them to open and read text files, however they have a multitude of different uses. The next time you're working with large/infinite data sets, consider using Streams.
